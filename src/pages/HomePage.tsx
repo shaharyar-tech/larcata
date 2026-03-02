@@ -65,15 +65,18 @@ const HomePage = () => {
   return (
     <div className="min-h-screen font-sans overflow-x-hidden">
 
+      {/* ══ HERO SECTION ══ */}
       <div
         className="relative bg-cover bg-center py-16 sm:py-24 md:py-40 px-4"
         style={{ backgroundImage: `url('/assets/Hero.png')` }}
       >
         <div className="absolute inset-0 bg-black/30" />
         <div className="relative z-10 container mx-auto text-center text-white">
+
           <h1 className="font-moonscape text-white uppercase font-medium tracking-[0.08em] leading-[0.92] text-[40px] sm:text-[64px] md:text-[88px] lg:text-[100px] mb-10 sm:mb-16 md:mb-[100px] drop-shadow-[0_8px_20px_rgba(0,0,0,0.6)]">
             EVERYTHING <br /> CARTAGENA
           </h1>
+
           <div className="max-w-3xl mx-auto px-2 sm:px-4">
             <nav className="hidden lg:grid grid-cols-6 gap-1 mb-2">
               {["Activities", "Accommodations", "Beaches", "Boating", "Real Estate", "Gastronomy"].map((tag) => (
@@ -89,6 +92,7 @@ const HomePage = () => {
                 </Button>
               ))}
             </div>
+
             <div className="flex flex-col gap-3">
               <div className="flex bg-white rounded overflow-hidden p-1">
                 <input
@@ -108,12 +112,14 @@ const HomePage = () => {
         </div>
       </div>
 
+      {/* ══ WHAT TO DO SECTION TITLE ══ */}
       <div className="pt-12 sm:pt-16 md:pt-20 px-4 sm:px-8 md:px-10 text-center">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-black font-antigua text-black text-center uppercase mb-8 sm:mb-12 md:mb-16">
           What to do in Cartagena, Colombia
         </h2>
       </div>
 
+      {/* ══ CATEGORY GRID ══ */}
       <div className="container mx-auto pb-12 sm:pb-16 md:pb-20 px-4 sm:px-8 md:px-10 lg:px-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
           {[
@@ -130,7 +136,7 @@ const HomePage = () => {
               </div>
               <img
                 src={item.img}
-                className="w-full h-56 sm:h-64 md:h-72 lg:h-80 xl:h-96 object-cover transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80 object-cover transition-transform duration-500 group-hover:scale-105"
                 alt={item.label}
               />
             </Link>
@@ -138,32 +144,38 @@ const HomePage = () => {
         </div>
       </div>
 
+      {/* ══ THE BEST OF SECTION TITLE ══ */}
       <div className="text-center px-4 mb-4 mt-6 sm:mt-10">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-black font-antigua text-black text-center uppercase mb-8 sm:mb-12 md:mb-16">
           The best of Cartagena, Colombia
         </h2>
       </div>
 
-     <section className="container mb-8 mx-auto pb-10 px-4 sm:px-8 md:px-10 lg:px-16">
-  <div className="flex flex-col gap-4 md:hidden">
-    <Card image={beachpic} category="BEACHES" title="Best Beaches of Cartagena" author="Miguel" time="17 min" className="w-full" />
-    <Card image={resturantpic} category="Gastronomy" title="The Best Restaurants of Cartagena." author="May" time="10 min" className="w-full" />
-    <Card image={shippic} category="ACTIVITIES" title="What to do in Cartagena" author="Maria" time="10 min" className="w-full" />
-    <Card image={girlpic} category="Fashion" title="The Best Shopping in Cartagena" author="Alejandra" time="7 min" className="w-full" />
-    <Card image={hotel1} category="HOTELS" title="Top Hotels of Cartagena" author="Natalia" time="21 min" className="w-full" />
-    <Card image={artpic} category="Art" title="The Best Street Art of Cartagena" author="Juan Pablo" time="5 min" className="w-full" />
-  </div>
+      {/* ══ MASONRY GRID SECTION ══ */}
+      <section className="container mb-8 mx-auto pb-10 px-4 sm:px-8 md:px-10 lg:px-16">
 
-  <div className="grid grid-cols-3 gap-6 max-md:hidden" style={{ gridAutoRows: "260px" }}>
-    <Card image={beachpic} category="BEACHES" title="Best Beaches of Cartagena" author="Miguel" time="17 min" style={{ gridRow: "span 2" }} />
-    <Card image={resturantpic} category="Gastronomy" title="The Best Restaurants of Cartagena." author="May" time="10 min" />
-    <Card image={shippic} category="ACTIVITIES" title="What to do in Cartagena" author="Maria" time="10 min" style={{ gridRow: "span 2" }} />
-    <Card image={girlpic} category="Fashion" title="The Best Shopping in Cartagena" author="Alejandra" time="7 min" style={{ gridRow: "span 2", zIndex: 10 }} />
-    <CircleCard image={hotelpic} category="HOTELS" title="Top Hotels of Cartagena" author="Natalia" time="21 min" className="rounded-full" />
-    <Card image={artpic} category="Art" title="The Best Street Art of Cartagena" author="Juan Pablo" time="5 min" style={{ marginTop: "20px", zIndex: 10 }} />
-  </div>
-</section>
+        {/* Mobile: single column stack */}
+        <div className="flex flex-col gap-4 md:hidden">
+          <Card image={beachpic} category="BEACHES" title="Best Beaches of Cartagena" author="Miguel" time="17 min" className="w-full" />
+          <Card image={resturantpic} category="Gastronomy" title="The Best Restaurants of Cartagena." author="May" time="10 min" className="w-full" />
+          <Card image={shippic} category="ACTIVITIES" title="What to do in Cartagena" author="Maria" time="10 min" className="w-full" />
+          <Card image={girlpic} category="Fashion" title="The Best Shopping in Cartagena" author="Alejandra" time="7 min" className="w-full" />
+          <Card image={hotel1} category="HOTELS" title="Top Hotels of Cartagena" author="Natalia" time="21 min" className="w-full" />
+          <Card image={artpic} category="Art" title="The Best Street Art of Cartagena" author="Juan Pablo" time="5 min" className="w-full" />
+        </div>
 
+        {/* Desktop: masonry grid */}
+        <div className="hidden md:grid grid-cols-3 gap-6 auto-rows-[260px]">
+          <Card image={beachpic} category="BEACHES" title="Best Beaches of Cartagena" author="Miguel" time="17 min" className="row-span-2" />
+          <Card image={resturantpic} category="Gastronomy" title="The Best Restaurants of Cartagena." author="May" time="10 min" className="row-span-1" />
+          <Card image={shippic} category="ACTIVITIES" title="What to do in Cartagena" author="Maria" time="10 min" className="row-span-2" />
+          <Card image={girlpic} category="Fashion" title="The Best Shopping in Cartagena" author="Alejandra" time="7 min" className="row-span-2 sm:row-span-3 z-10" />
+          <CircleCard image={hotelpic} category="HOTELS" title="Top Hotels of Cartagena" author="Natalia" time="21 min" className="rounded-full" />
+          <Card image={artpic} category="Art" title="The Best Street Art of Cartagena" author="Juan Pablo" time="5 min" className="mt-5 z-10" />
+        </div>
+      </section>
+
+      {/* ══ HOW TO THRIVE SECTION ══ */}
       <div className="py-12 sm:py-16 md:py-24 relative bg-[url('Rectangle.png')] sm:-mt-8 md:-mt-24">
         <div className="container mx-auto relative z-10 px-4 sm:px-8 md:px-16">
           <div className="flex flex-col md:grid md:grid-cols-2 items-center gap-6 md:gap-16">
@@ -178,6 +190,7 @@ const HomePage = () => {
                 <a href="https://lacarta.co/cartagena/resources/">resources</a>
               </Button>
             </div>
+
             <div className="relative flex flex-col items-center justify-center w-full">
               <img
                 src={carpic}
@@ -192,6 +205,7 @@ const HomePage = () => {
         </div>
       </div>
 
+      {/* ══ FREE TOOLS SECTION ══ */}
       <div className="container mb-16 md:mb-24 mx-auto px-4 sm:px-8 md:px-16 mt-10 md:mt-12">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-black font-antigua text-center capitalize mb-12 md:mb-16">
           Free tools for your Cartagena journey
