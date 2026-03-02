@@ -147,7 +147,7 @@ const HomePage = () => {
       {/* ══ THE BEST OF SECTION TITLE ══ */}
       <div className="text-center px-4 mb-4 mt-6 sm:mt-10">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-black font-antigua text-black text-center uppercase mb-8 sm:mb-12 md:mb-16">
-          The best of Cartagena, Colombia
+          The best of Cartagena, Colombiannn     
         </h2>
       </div>
 
