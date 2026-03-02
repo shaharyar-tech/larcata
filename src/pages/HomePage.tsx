@@ -155,7 +155,7 @@ const HomePage = () => {
       <section className="container mb-8 mx-auto pb-10 px-4 sm:px-8 md:px-10 lg:px-16">
 
         {/* Mobile: single column stack */}
-        <div className="flex flex-col gap-4 md:hidden">
+        <div className="flex flex-col gap-4 lg:hidden">
           <Card image={beachpic} category="BEACHES" title="Best Beaches of Cartagena" author="Miguel" time="17 min" className="w-full" />
           <Card image={resturantpic} category="Gastronomy" title="The Best Restaurants of Cartagena." author="May" time="10 min" className="w-full" />
           <Card image={shippic} category="ACTIVITIES" title="What to do in Cartagena" author="Maria" time="10 min" className="w-full" />
