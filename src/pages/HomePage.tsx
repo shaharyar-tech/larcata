@@ -144,66 +144,25 @@ const HomePage = () => {
         </h2>
       </div>
 
-      <section className="container mb-8 mx-auto pb-10 px-4 sm:px-8 md:px-10 lg:px-16">
-        <div className="flex flex-col gap-4 md:hidden">
-          <Card image={beachpic} category="BEACHES" title="Best Beaches of Cartagena" author="Miguel" time="17 min" className="w-full" />
-          <Card image={resturantpic} category="Gastronomy" title="The Best Restaurants of Cartagena." author="May" time="10 min" className="w-full" />
-          <Card image={shippic} category="ACTIVITIES" title="What to do in Cartagena" author="Maria" time="10 min" className="w-full" />
-          <Card image={girlpic} category="Fashion" title="The Best Shopping in Cartagena" author="Alejandra" time="7 min" className="w-full" />
-          <Card image={hotel1} category="HOTELS" title="Top Hotels of Cartagena" author="Natalia" time="21 min" className="w-full" />
-          <Card image={artpic} category="Art" title="The Best Street Art of Cartagena" author="Juan Pablo" time="5 min" className="w-full" />
-        </div>
+     <section className="container mb-8 mx-auto pb-10 px-4 sm:px-8 md:px-10 lg:px-16">
+  <div className="flex flex-col gap-4 md:hidden">
+    <Card image={beachpic} category="BEACHES" title="Best Beaches of Cartagena" author="Miguel" time="17 min" className="w-full" />
+    <Card image={resturantpic} category="Gastronomy" title="The Best Restaurants of Cartagena." author="May" time="10 min" className="w-full" />
+    <Card image={shippic} category="ACTIVITIES" title="What to do in Cartagena" author="Maria" time="10 min" className="w-full" />
+    <Card image={girlpic} category="Fashion" title="The Best Shopping in Cartagena" author="Alejandra" time="7 min" className="w-full" />
+    <Card image={hotel1} category="HOTELS" title="Top Hotels of Cartagena" author="Natalia" time="21 min" className="w-full" />
+    <Card image={artpic} category="Art" title="The Best Street Art of Cartagena" author="Juan Pablo" time="5 min" className="w-full" />
+  </div>
 
-        <div className="hidden md:grid grid-cols-3 gap-6" style={{ gridAutoRows: "260px" }}>
-          <Card
-            image={beachpic}
-            category="BEACHES"
-            title="Best Beaches of Cartagena"
-            author="Miguel"
-            time="17 min"
-            style={{ gridRow: "span 2" }}
-          />
-          <Card
-            image={resturantpic}
-            category="Gastronomy"
-            title="The Best Restaurants of Cartagena."
-            author="May"
-            time="10 min"
-          />
-          <Card
-            image={shippic}
-            category="ACTIVITIES"
-            title="What to do in Cartagena"
-            author="Maria"
-            time="10 min"
-            style={{ gridRow: "span 2" }}
-          />
-          <Card
-            image={girlpic}
-            category="Fashion"
-            title="The Best Shopping in Cartagena"
-            author="Alejandra"
-            time="7 min"
-            style={{ gridRow: "span 2", zIndex: 10 }}
-          />
-          <CircleCard
-            image={hotelpic}
-            category="HOTELS"
-            title="Top Hotels of Cartagena"
-            author="Natalia"
-            time="21 min"
-            className="rounded-full"
-          />
-          <Card
-            image={artpic}
-            category="Art"
-            title="The Best Street Art of Cartagena"
-            author="Juan Pablo"
-            time="5 min"
-            style={{ marginTop: "20px", zIndex: 10 }}
-          />
-        </div>
-      </section>
+  <div className="grid grid-cols-3 gap-6 max-md:hidden" style={{ gridAutoRows: "260px" }}>
+    <Card image={beachpic} category="BEACHES" title="Best Beaches of Cartagena" author="Miguel" time="17 min" style={{ gridRow: "span 2" }} />
+    <Card image={resturantpic} category="Gastronomy" title="The Best Restaurants of Cartagena." author="May" time="10 min" />
+    <Card image={shippic} category="ACTIVITIES" title="What to do in Cartagena" author="Maria" time="10 min" style={{ gridRow: "span 2" }} />
+    <Card image={girlpic} category="Fashion" title="The Best Shopping in Cartagena" author="Alejandra" time="7 min" style={{ gridRow: "span 2", zIndex: 10 }} />
+    <CircleCard image={hotelpic} category="HOTELS" title="Top Hotels of Cartagena" author="Natalia" time="21 min" className="rounded-full" />
+    <Card image={artpic} category="Art" title="The Best Street Art of Cartagena" author="Juan Pablo" time="5 min" style={{ marginTop: "20px", zIndex: 10 }} />
+  </div>
+</section>
 
       <div className="py-12 sm:py-16 md:py-24 relative bg-[url('Rectangle.png')] sm:-mt-8 md:-mt-24">
         <div className="container mx-auto relative z-10 px-4 sm:px-8 md:px-16">
