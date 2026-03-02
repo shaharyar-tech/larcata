@@ -152,28 +152,19 @@ const HomePage = () => {
       </div>
 
       {/* ══ MASONRY GRID SECTION ══ */}
-      <section className="container mb-8 mx-auto pb-10 px-4 sm:px-8 md:px-10 lg:px-16">
-
-        {/* Mobile: single column stack */}
-        <div className="flex flex-col gap-4 lg:hidden">
-          <Card image={beachpic} category="BEACHES" title="Best Beaches of Cartagena" author="Miguel" time="17 min" className="w-full" />
-          <Card image={resturantpic} category="Gastronomy" title="The Best Restaurants of Cartagena." author="May" time="10 min" className="w-full" />
-          <Card image={shippic} category="ACTIVITIES" title="What to do in Cartagena" author="Maria" time="10 min" className="w-full" />
-          <Card image={girlpic} category="Fashion" title="The Best Shopping in Cartagena" author="Alejandra" time="7 min" className="w-full" />
-          <Card image={hotel1} category="HOTELS" title="Top Hotels of Cartagena" author="Natalia" time="21 min" className="w-full" />
-          <Card image={artpic} category="Art" title="The Best Street Art of Cartagena" author="Juan Pablo" time="5 min" className="w-full" />
-        </div>
-
-        {/* Desktop: masonry grid */}
-        <div className="hidden md:grid grid-cols-3 gap-6 auto-rows-[260px]">
-          <Card image={beachpic} category="BEACHES" title="Best Beaches of Cartagena" author="Miguel" time="17 min" className="row-span-2" />
-          <Card image={resturantpic} category="Gastronomy" title="The Best Restaurants of Cartagena." author="May" time="10 min" className="row-span-1" />
-          <Card image={shippic} category="ACTIVITIES" title="What to do in Cartagena" author="Maria" time="10 min" className="row-span-2" />
-          <Card image={girlpic} category="Fashion" title="The Best Shopping in Cartagena" author="Alejandra" time="7 min" className="row-span-2 sm:row-span-3 z-10" />
-          <CircleCard image={hotelpic} category="HOTELS" title="Top Hotels of Cartagena" author="Natalia" time="21 min" className="rounded-full" />
-          <Card image={artpic} category="Art" title="The Best Street Art of Cartagena" author="Juan Pablo" time="5 min" className="mt-5 z-10" />
-        </div>
-      </section>
+     <section className="container mb-8 mx-auto pb-10 px-4 sm:px-8 md:px-10 lg:px-16">
+  <div
+    className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6"
+    style={{ gridAutoRows: "auto" }}
+  >
+    <Card image={beachpic} category="BEACHES" title="Best Beaches of Cartagena" author="Miguel" time="17 min" className="w-full" style={{ gridRow: "auto" }} />
+    <Card image={resturantpic} category="Gastronomy" title="The Best Restaurants of Cartagena." author="May" time="10 min" className="w-full" style={{ gridRow: "auto" }} />
+    <Card image={shippic} category="ACTIVITIES" title="What to do in Cartagena" author="Maria" time="10 min" className="w-full" style={{ gridRow: "auto" }} />
+    <Card image={girlpic} category="Fashion" title="The Best Shopping in Cartagena" author="Alejandra" time="7 min" className="w-full" style={{ gridRow: "auto" }} />
+    <Card image={hotel1} category="HOTELS" title="Top Hotels of Cartagena" author="Natalia" time="21 min" className="w-full" style={{ gridRow: "auto" }} />
+    <Card image={artpic} category="Art" title="The Best Street Art of Cartagena" author="Juan Pablo" time="5 min" className="w-full" style={{ gridRow: "auto" }} />
+  </div>
+</section>
 
       {/* ══ HOW TO THRIVE SECTION ══ */}
       <div className="py-12 sm:py-16 md:py-24 relative bg-[url('Rectangle.png')] sm:-mt-8 md:-mt-24">
