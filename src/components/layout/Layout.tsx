@@ -5,7 +5,7 @@ import whatsapp from "/assets/whatsapp.svg";
 import footerbg from "/assets/footer-bg.png";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-
+import {BookingDialog} from  "@/components/bookingForm"
 import { TopBar } from "./TopBar";
 import {
   Heart,
@@ -40,6 +40,7 @@ const Layout = ({ children }) => {
   ];
 
   const [isOpen, setIsOpen] = useState(false);
+  const [dialogOpen, setDialogOpen] = useState(false);
 
   return (
     <>
@@ -82,7 +83,7 @@ const Layout = ({ children }) => {
           <Link to="#" className="text-white text-sm hidden md:block">
             Login
           </Link>
-          <Button className="bg-gradient-to-r from-gold to-gold-light hover:bg-[#b88f30] text-white  rounded-sm px-6 hidden sm:block">
+          <Button onClick={() => setDialogOpen(true)} className="bg-gradient-to-b from-gold to-gold-light hover:bg-gold text-white  rounded px-6 hidden sm:block">
             BOOK A TRIP
           </Button>
 
@@ -175,7 +176,7 @@ const Layout = ({ children }) => {
                 of Cartagena la Heroica.
               </p>
 
-              <Button className="bg-gradient-to-r from-gold to-gold-light hover:bg-gold text-white text-lg font-semibold rounded-sm px-6 w-full">
+              <Button onClick={() => setDialogOpen(true)} className="bg-gradient-to-b from-gold to-gold-light hover:bg-gold text-white text-lg font-semibold rounded px-6 w-full">
                 BOOK TRIP
               </Button>
             </div>
@@ -307,6 +308,7 @@ const Layout = ({ children }) => {
         </div>
         </div>
       </footer>
+      <BookingDialog open={dialogOpen} onOpenChange={setDialogOpen} />
     </>
   );
 };
