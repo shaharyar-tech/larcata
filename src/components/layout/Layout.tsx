@@ -148,11 +148,13 @@ const Layout = ({ children }) => {
       <main>{children}</main>
 
       <footer
-        className="container bg-black text-white pt-20 pb-10 relative bg-no-repeat bg-center bg-contain"
+        className=" bg-black text-white pt-20 pb-10 relative bg-no-repeat bg-center bg-contain"
         style={{ backgroundImage: `url(${footerbg})` }}
       >
+        <div className="container">
+
         <div
-          className="absolute inset-0 pointer-events-none"
+          className=" absolute inset-0 pointer-events-none"
           style={{
             background:
               "radial-gradient(circle at center, rgba(245, 242, 242, 0.2) 0%, rgba(0,0,0,0) 60%, rgba(0,0,0,0.3) 100%)",
@@ -302,6 +304,7 @@ const Layout = ({ children }) => {
               <span>Privacy Policy - Terms & Conditions</span>
             </div>
           </div>
+        </div>
         </div>
       </footer>
     </>
