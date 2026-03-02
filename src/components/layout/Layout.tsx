@@ -96,7 +96,7 @@ const Layout = ({ children }) => {
           </button>
         </div>
 
-        <div className="inline absolute z-[999] sm:top-44 top-28 left-10">
+        <div className="inline absolute z-[999] top-28 sm:top-44 right-4 sm:right-auto sm:left-4 flex flex-col items-center">
           <div className="bg-[#f15c5d] p-1 sm:p-3 rounded-full mb-2 sm:mb-6 ">
             <Share2 className="w-5 h-5 sm:h-10 sm:w-10 text-white font-bold  fill-white" />
           </div>
